@@ -3,6 +3,8 @@
 This repository will briefly go over how to trigger Cypress tests using a sample project.
 The sample project can be [downloaded here](https://cypressprojectsample.s3.us-east-2.amazonaws.com/cypress.zip).
 
+To learn more in depth about the APIs, reference [this documentation page](https://docs.experitest.com/display/TE/Cypress).
+
 ## Start a Cypress Execution
 
 To trigger Cypress tests, we need to rely on an API call:
