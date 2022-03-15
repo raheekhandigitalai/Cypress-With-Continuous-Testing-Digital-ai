@@ -1,1 +1,45 @@
 # Cypress-With-Continuous-Testing-Digital.ai
+
+This repository will briefly go over how to trigger Cypress tests using a sample project.
+The sample project can be [downloaded here](https://cypressprojectsample.s3.us-east-2.amazonaws.com/cypress.zip).
+
+## Start a Cypress Execution
+
+To trigger Cypress tests, we need to rely on an API call:
+
+POST - /api/v1/executions
+
+Parameters accepted:
+
+![parameters](images/parameters.png)
+
+Here is a sample request sent using Postman:
+
+![post_request](images/post_request_postman.png)
+
+## Get Cypress Execution Status
+
+To see the Cypress tests progress, we need to run an API to get the status information:
+
+GET - /api/v1/executions/{Execution_ID}/status
+
+## Viewing The Results
+
+In the SeeTest Cloud UI, using the following steps, we can navigate to the SeeTest Reporter where the results are stored:
+
+1. Login to the SeeTest Cloud
+2. Click on your Initials > Go To Reporter:
+
+![go_to_reporter](images/go_to_reporter.png)
+
+3. Navigate to Tests tab:
+
+![tests_tab](images/tests_tab.png)
+
+If the execution was recent, it should show up in the list:
+
+![results_list](images/results_list.png)
+
+Otherwise also searching for the test results using the Filter option by searching with "test.run.id" followed with the Execution ID received from the API call:
+
+![filter](images/filter.png)
