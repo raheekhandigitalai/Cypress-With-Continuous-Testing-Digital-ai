@@ -19,6 +19,12 @@ Here is a sample request sent using Postman:
 
 ![post_request](images/post_request_postman.png)
 
+For copy / paste purposes, here is the 'conf' section in plain text:
+
+```
+{"browsers":[{"browser":"chrome","cypressVersion":"8.3.0"},{"browser":"chrome","cypressVersion":"8.3.0"}]}
+```
+
 ## Get Cypress Execution Status
 
 To see the Cypress tests progress, we need to run an API to get the status information:
