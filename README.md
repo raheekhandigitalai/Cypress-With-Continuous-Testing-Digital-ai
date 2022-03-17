@@ -25,11 +25,28 @@ For copy / paste purposes, here is the 'conf' section in plain text:
 {"browsers":[{"browser":"chrome","cypressVersion":"8.3.0"},{"browser":"chrome","cypressVersion":"8.3.0"}]}
 ```
 
+The equivalent command in cURL:
+
+```
+curl --location --request POST 'https://uscloud.experitest.com/api/v1/executions' \
+--header 'Authorization: Bearer <Insert_Your_Access_Key>' \
+--form 'type="cypress"' \
+--form 'project=@"/Users/RKhan/Desktop/cypress_projects/cypress.zip"' \
+--form 'conf="{\"browsers\":[{\"browser\":\"chrome\",\"cypressVersion\":\"8.3.0\"},{\"browser\":\"chrome\",\"cypressVersion\":\"8.3.0\"}]}"'
+```
+
 ## Get Cypress Execution Status
 
 To see the Cypress tests progress, we need to run an API to get the status information:
 
 GET - /api/v1/executions/{Execution_ID}/status
+
+The equivalent command in cURL:
+
+```
+curl --location --request GET 'https://uscloud.experitest.com/api/v1/executions/<insert_test_run_id>/status' \
+--header 'Authorization: Bearer <Insert_Your_Access_Key>'
+```
 
 ## Viewing The Results
 
