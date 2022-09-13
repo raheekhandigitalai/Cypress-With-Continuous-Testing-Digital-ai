@@ -22,7 +22,7 @@ Here is a sample request sent using Postman:
 For copy / paste purposes, here is the 'conf' section in plain text:
 
 ```
-{"browsers":[{"browser":"chrome","cypressVersion":"8.3.0"},{"browser":"chrome","cypressVersion":"8.3.0"}]}
+{"browsers":[{"browser":"chrome","imageVersion":"8.3.0"},{"browser":"chrome","imageVersion":"8.3.0"}]}
 ```
 
 ### The equivalent command in cURL:
@@ -32,7 +32,7 @@ curl --location --request POST 'https://uscloud.experitest.com/api/v1/executions
 --header 'Authorization: Bearer <Insert_Your_Access_Key>' \
 --form 'type="cypress"' \
 --form 'project=@"/Users/RKhan/Desktop/cypress_projects/cypress.zip"' \
---form 'conf="{\"browsers\":[{\"browser\":\"chrome\",\"cypressVersion\":\"8.3.0\"},{\"browser\":\"chrome\",\"cypressVersion\":\"8.3.0\"}]}"'
+--form 'conf="{\"browsers\":[{\"browser\":\"chrome\",\"imageVersion\":\"8.3.0\"},{\"browser\":\"chrome\",\"imageVersion\":\"8.3.0\"}]}"'
 ```
 
 ## Get Cypress Execution Status
